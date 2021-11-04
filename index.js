@@ -19,8 +19,8 @@ function createMenuItem(name, price, category){
     const newItem = {
       name,
       price,
-      category,
-    }
+      category
+    };
     return newItem;
 }
 
@@ -60,17 +60,15 @@ const burger = {
   
   discount : function (role) {
    if (role === 'teacher' || role === 'student') {
-     console.log(this.price * .75);
+     return this.price - (this.price *.25);
    } else {
-    console.log(this.price * .90);
+    return this.price - (this.price *.1);
   }
   }       
 }
   
 
-burger.discount('teacher')
-burger.discount('public')
-burger.discount('student')
+console.log(burger.discount('teacher'))
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
@@ -98,7 +96,7 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-console.log(reviews[5].feedback.push("this place is chill with really cool people, great for getting work done on weekdays"))
+reviews[reviews.length -1].feeback = "this place is chill with really cool people, great for getting work done on weekdays"
 
 
 
@@ -136,9 +134,9 @@ Use the getReviewByIndex function below to do the following:
 
 
 function getReviewByIndex(array, i) {
-  const newReview = {
-  console.log(`${name} gave the restaurant a ${rating} star review, and their feedback was: ${feedback}`)
-}
+//   const newReview = {
+//   console.log(`${name} gave the restaurant a ${rating} star review, and their feedback was: ${feedback}`)
+// }
 }
 
   
@@ -155,7 +153,7 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
+function getLastReview(array) {
   /*Your code here*/
 } 
 
