@@ -111,13 +111,14 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview(name, rating, feedback){
+function addReview(array, name, rating, feedback){
   const newArray = {
     name,
     rating,
     feedback,
-  }
-  return newArray;
+  };
+  array.push(newArray);
+  return array;
 }
 
 console.log(addReview('Daniela', 5, 'Beautiful atmosphere and wonderful vegan options!'));
@@ -133,10 +134,8 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(array, i) {
-//   const newReview = {
-//   console.log(`${name} gave the restaurant a ${rating} star review, and their feedback was: ${feedback}`)
-// }
+function getReviewByIndex(array, index) {
+  return `${array[index].name} gave the restaurant a ${array[index].rating} star review, and their feedback was: ${array[index].feedback}`
 }
 
   
@@ -154,7 +153,7 @@ Use the getLastReview function below to do the following:
 
 
 function getLastReview(array) {
-  /*Your code here*/
+  return `${array[array.length - 1].name} gave the restaurant a ${array[array.length - 1].rating} star review, and their feedback was: ${array[array.length - 1].feedback}`
 } 
 
 
@@ -175,8 +174,16 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(array, rating) {
+    const reviewsInRange = [];
+
+    for (let i = 0; i < array.length; i++) {
+      if(Math.floor(array[i].rating)) {
+        reviewsInRange.push(array[i]);
+      }
+    }
+
+    return reviewsInRange;
   }
 
   
