@@ -115,13 +115,13 @@ function addReview(array, name, rating, feedback){
   const newArray = {
     name,
     rating,
-    feedback,
+    feedback
   };
   array.push(newArray);
   return array;
 }
 
-console.log(addReview('Daniela', 5, 'Beautiful atmosphere and wonderful vegan options!'));
+console.log(addReview(reviews, 'Daniela', 5, 'Beautiful atmosphere and wonderful vegan options!'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -174,17 +174,18 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(array, rating) {
-    const reviewsInRange = [];
+//  function getReviewByRating(array, rating) {
+//     const reviewsInRange = [];
 
-    for (let i = 0; i < array.length; i++) {
-      if(Math.floor(array[i].rating)) {
-        reviewsInRange.push(array[i]);
-      }
-    }
+//     for (let i = 0; i < array.length; i++) {
+//       console.log(i, array[i].rating)
+//       if(Math.floor(array[i].rating)) {
+//         reviewsInRange.push(array[i]);
+//       }
+//     }
 
-    return reviewsInRange;
-  }
+//     return reviewsInRange;
+//   }
 
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
